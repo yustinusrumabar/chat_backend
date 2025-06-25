@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: chat-backend
+    env: go
+    plan: free
+    buildCommand: go build -o main .
+    startCommand: ./main
+    envVars:
+      - key: MONGO_URI
+        value: mongodb+srv://yustinusrumabar:Dilensha1@cluster0.pmuqfwb.mongodb.net/?retryWrites=true&w=majority
